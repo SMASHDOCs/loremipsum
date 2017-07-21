@@ -23,6 +23,7 @@ _SENTENCE_DELIMITERS = ['.', '?', '!']
 _WORD_DELIMITERS = [','] + _SENTENCE_DELIMITERS
 
 _SAMPLE = resource_string(__name__, 'default/sample.txt')
+_SAMPLE = bytes.decode(_SAMPLE)
 _DICTIONARY = resource_string(__name__, 'default/dictionary.txt').split()
 _DICTIONARY = [bytes.decode(word) for word in _DICTIONARY]
 
